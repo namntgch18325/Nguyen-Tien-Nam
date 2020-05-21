@@ -16,7 +16,7 @@
             <p class="hint-text">Đăng nhập bằng Facebook /Email</p>
             <div class="social-btn text-center">
                 <a href="<?=$data["Facebook_Login"]?>" class="btn btn-primary btn-lg" title="Facebook"><i class="fa fa-facebook"></i></a>
-                <a href="<?=$data["URL_auth"]?>" class="btn btn-danger btn-lg" title="Google"><i class="fa fa-google"></i></a>
+                <a href="#>" class="btn btn-danger btn-lg" title="Google"><i class="fa fa-google"></i></a>
             </div>
             <div class="or-seperator"><b>Or</b></div>
             <p class="hint-text">Đăng nhập bằng tài khoản Find Home của bạn</p>
