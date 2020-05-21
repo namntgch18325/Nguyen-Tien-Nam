@@ -1,0 +1,284 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-family: 'Source Sans Pro', sans-serif; letter-spacing: 0px; font-size: 17px; color: #6d767a; font-weight: 400; line-height: 34px; }
+h1, h2, h3, h4, h5, h6 { color: #161f23; margin: 0px 0px 15px 0px; font-family: 'Source Sans Pro', sans-serif; font-weight: 700; }
+h1 { font-size: 42px; }
+h2 { font-size: 32px; }
+h3 { font-size: 24px; }
+h4 { font-size: 20px; }
+h5 { font-size: 14px; }
+h6 { font-size: 12px; }
+
+/*------HEADER -----*/
+header {
+    padding: 156px 0 80px;
+}
+header h1
+{
+    color: #ff793f;
+   animation: appear 1.5s forwards;
+}
+@-webkit-keyframes appear
+{
+    from{transform: translateY(-300px);opacity: 0}
+    to{transform: translateY(0);opacity: 1}
+}
+header p
+{
+    color: #7f8c8d;
+}
+  
+/*------NAVIGATION -----*/
+nav#mainNav
+{
+    background-color: #fa8231;   
+}
+.navbar .container .navbar-brand
+{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    color: #f7f1e3;
+    animation: app 1.5s forwards;
+}
+@-webkit-keyframes app
+{
+    from{transform: translateX(-200px); opacity: 0 }
+    to{transform: translateX(0);opacity: 1}
+}
+.navbar .container .navbar-brand:hover
+{
+    color: white;
+}
+.navbar .container .navbar-brand span
+{
+    font-size: 15px;
+}
+.nav-item .nav-link 
+{
+    text-transform: uppercase;
+    font-size: 13.5px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+#setColor
+{
+    color: #f7f1e3;
+}
+#setColor:hover
+{
+    color: white;
+}
+/*------ABOUT US -----*/
+  
+/*------LOCATION -----*/
+div.container h3.txtTitle 
+{
+    color: #ff793f;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    font-size: 30px;
+}
+p.paraText
+{
+    color: #7f8c8d;
+    font-size: 19px;
+    text-align: center;
+}
+.card-txt
+{
+    color: #ff793f;
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-weight: bold;
+}
+/*-----IMAGES-----*/
+
+h3{
+    border-bottom: 3px solid #fa8231;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    padding-bottom: 7px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-deck{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+li.nav-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#img{
+    margin-right: 5px;
+}
+
+li#img-login{
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+#banner{
+    background-color: white;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,400,500,700);
+body {
+ font-family:Rubik,sans-serif;
+ position:relative;
+ font-weight:400;
+ font-size:15px
+}
+ul {
+ padding:0;
+ margin:0
+}
+li {
+ list-style:none
+}
+a:focus,a:hover {
+ text-decoration:none;
+ -webkit-transition:.3s ease;
+ -o-transition:.3s ease;
+ transition:.3s ease
+}
+a:focus {
+ outline:0
+}
+img {
+ max-width:100%;
+}
+p {
+ font-size:16px;
+ line-height:30px;
+ color:#898b96;
+ font-weight:300
+}
+h4 {
+ font-family:Rubik,sans-serif;
+ margin:0;
+ font-weight:400;
+ padding:0;
+ color:#363940
+}
+a {
+ color:#5867dd
+}
+.no-padding {
+ padding:0!important
+}
+.footer-big {
+ padding:50px 0 65px 0
+}
+.footer-big .footer-widget {
+ margin-bottom:40px
+}
+.footer--light {
+ background:#e7e8ed
+}
+.footer-big .footer-menu ul li a,.footer-big p,.footer-big ul li {
+ color:#898b96
+}
+.footer-menu {
+ padding-left:48px
+}
+.footer-menu ul li a {
+ font-size:15px;
+ line-height:32px;
+ -webkit-transition:.3s;
+ -o-transition:.3s;
+ transition:.3s
+}
+.footer-menu ul li a:hover {
+ color:#5867dd;
+}
+.footer-menu--1 {
+ width:100%
+}
+.footer-widget-title {
+ line-height:42px;
+ margin-bottom:10px;
+ font-size:18px
+}
+.mini-footer {
+ background:#fa8231;
+ text-align:center;
+ padding:32px 0
+}
+.mini-footer p {
+ margin:0;
+ line-height:26px;
+ font-size:15px;
+ color:#424242;
+}
+.mini-footer p a {
+ color: white;
+}
+.mini-footer p a:hover {
+    color:#5867dd;
+}
+.widget-about img {
+ display:block;
+ margin-bottom:30px
+}
+.widget-about p {
+ font-weight:400
+}
+.widget-about .contact-details {
+ margin:30px 0 0 0
+}
+.widget-about .contact-details li {
+ margin-bottom:10px
+}
+.widget-about .contact-details li:last-child {
+ margin-bottom:0
+}
+.widget-about .contact-details li span {
+ padding-right:12px
+}
+.widget-about .contact-details li a {
+ color:#5867dd
+}
+@media (max-width:991px) {
+ .footer-menu {
+  padding-left:0
+ }
+}
+
+footer{
+    margin-top: 20px;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+#demo{
+    margin-bottom: 20px;
+}
+
+h3.txtTitle{
+    text-align: center;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+.card-block p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-item{
+    color: white;
+}
