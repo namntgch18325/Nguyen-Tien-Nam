@@ -46,18 +46,18 @@
         }
         function CreateURLLoginByGoogle()
         {
-            require_once "./APIs/Google/vendor/autoload.php";
-            $clientID = '433821562109-1grqlr4mf0rs0osshnnbmvqgfqo54qof.apps.googleusercontent.com';
-            $clientSecret = 'RQyI9eCHmG83VwfUdIbREFIx';
-            $redirectUri = 'http://localhost:8080/NhaTro/Login/LoginWith_Gmail';
-            // create Client Request to access Google API
-            $client = new Google_Client();
-            $client->setClientId($clientID);
-            $client->setClientSecret($clientSecret);
-            $client->setRedirectUri($redirectUri);
-            $client->addScope("email");
-            $client->addScope("profile");
-            return $client->createAuthUrl();
+            // require_once "./APIs/Google/vendor/autoload.php";
+            // $clientID = '433821562109-1grqlr4mf0rs0osshnnbmvqgfqo54qof.apps.googleusercontent.com';
+            // $clientSecret = 'RQyI9eCHmG83VwfUdIbREFIx';
+            // $redirectUri = 'http://localhost:8080/NhaTro/Login/LoginWith_Gmail';
+            // // create Client Request to access Google API
+            // $client = new Google_Client();
+            // $client->setClientId($clientID);
+            // $client->setClientSecret($clientSecret);
+            // $client->setRedirectUri($redirectUri);
+            // $client->addScope("email");
+            // $client->addScope("profile");
+            // return $client->createAuthUrl();
         }
         function LoginWith_Facebook_Model()
         {
@@ -107,46 +107,46 @@
         }               
         function LoginWith_Gmail_Model()
         {
-            require_once "./APIs/Google/vendor/autoload.php";
-            $clientID = '433821562109-1grqlr4mf0rs0osshnnbmvqgfqo54qof.apps.googleusercontent.com';
-            $clientSecret = 'RQyI9eCHmG83VwfUdIbREFIx';
-            $redirectUri = 'http://localhost:8080/NhaTro/Login/LoginWith_Gmail';
-            // create Client Request to access Google API
-            $client = new Google_Client();
-            $client->setClientId($clientID);
-            $client->setClientSecret($clientSecret);
-            $client->setRedirectUri($redirectUri);
-            $client->addScope("email");
-            $client->addScope("profile");
+        //     require_once "./APIs/Google/vendor/autoload.php";
+        //     $clientID = '433821562109-1grqlr4mf0rs0osshnnbmvqgfqo54qof.apps.googleusercontent.com';
+        //     $clientSecret = 'RQyI9eCHmG83VwfUdIbREFIx';
+        //     $redirectUri = 'http://localhost:8080/NhaTro/Login/LoginWith_Gmail';
+        //     // create Client Request to access Google API
+        //     $client = new Google_Client();
+        //     $client->setClientId($clientID);
+        //     $client->setClientSecret($clientSecret);
+        //     $client->setRedirectUri($redirectUri);
+        //     $client->addScope("email");
+        //     $client->addScope("profile");
 
-            // authenticate code from Google OAuth Flow
-            if (isset($_GET['code'])) {
-            $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
-            $client->setAccessToken($token['access_token']);
+        //     // authenticate code from Google OAuth Flow
+        //     if (isset($_GET['code'])) {
+        //     $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
+        //     $client->setAccessToken($token['access_token']);
             
-            // get profile info
-            $google_oauth = new Google_Service_Oauth2($client);
-            $google_account_info = $google_oauth->userinfo->get();
-            $email =  $google_account_info->email;
-            $name =  $google_account_info->name;
-            $avartar =  $google_account_info->picture;
-            $gender = $google_account_info->gender;
-            $_SESSION["username"] = $email;
-            $_SESSION["name"] = $name;
-            $_SESSION["avartar"] = $avartar;
-            if(isset($_SESSION["username"]))
-            {
-                if(isset($_SESSION["name"]))
-                {
-                    $newObj = new Login_Model();
-                    $newObj->CreateAccountSocialMedia($_SESSION["username"],$_SESSION["name"],$_SESSION["username"]);
-                }
-            }
-            else
-            {
-                session_destroy();
-            }
-        }
+        //     // get profile info
+        //     $google_oauth = new Google_Service_Oauth2($client);
+        //     $google_account_info = $google_oauth->userinfo->get();
+        //     $email =  $google_account_info->email;
+        //     $name =  $google_account_info->name;
+        //     $avartar =  $google_account_info->picture;
+        //     $gender = $google_account_info->gender;
+        //     $_SESSION["username"] = $email;
+        //     $_SESSION["name"] = $name;
+        //     $_SESSION["avartar"] = $avartar;
+        //     if(isset($_SESSION["username"]))
+        //     {
+        //         if(isset($_SESSION["name"]))
+        //         {
+        //             $newObj = new Login_Model();
+        //             $newObj->CreateAccountSocialMedia($_SESSION["username"],$_SESSION["name"],$_SESSION["username"]);
+        //         }
+        //     }
+        //     else
+        //     {
+        //         session_destroy();
+        //     }
+        // }
           
         }    
         function Register($data)
